@@ -78,9 +78,7 @@ input:focus {
   transition-duration: 1s;
 }
 
-.continer {
-  margin-inline: auto;
-  background: black;
-  width: 1600px;
-  height: 800px;
+a {
+  text-decoration: none;
+  cursor: pointer;
 }
