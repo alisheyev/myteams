@@ -74,10 +74,58 @@ input:focus {
 }
 .button:hover {
   background: #ffffff;
-  color: #014E56;
+  color: #014e56;
   transition-duration: 1s;
 }
 
+@media (min-width: 5px) {
+  #header {
+    padding: 70px 0px;
+    background: #014e56;
+    color: #ffffff;
+  }
+  #header .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #header a,
+  #header button {
+    display: none;
+  }
+}
+@media (min-width: 5px) and (min-width: 375px) {
+  #header {
+    padding: 80px 0px;
+  }
+  #header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #header ul svg {
+    padding-right: 10px;
+  }
+  #header ul a {
+    padding-left: 40px;
+  }
+  #header a {
+    display: block;
+  }
+  #header .nav-open {
+    display: none;
+  }
+}
+@media (min-width: 520px) {
+  #header button {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  #header ul svg {
+    padding-right: 40px;
+  }
+}
 a {
   text-decoration: none;
   cursor: pointer;

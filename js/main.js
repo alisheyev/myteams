@@ -16,3 +16,17 @@ function blackCon() {
     continer.style.backgroundColor = "black";
     linkA.style.color = "yellow";
 }
+
+
+// --------------------------------
+
+document.querySelector("nav-open").addEventListener("click", openNavbar);
+document.querySelector("nav-close").addEventListener("click", closeNavbar);
+
+function openNavbar() {
+    document.querySelector("nav-burger").style.right = "0";
+}
+
+function closeNavbar() {
+    document.querySelector("nav-burger").style.right = "-100%";
+}

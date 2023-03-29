@@ -1,0 +1,65 @@
+@use "../abstracts/variables.scss" as var;
+@use "../abstracts/mixins.scss" as mix;
+
+@media (min-width: 5px) {
+  #header {
+    padding: 70px 0px;
+    background: var.$midnight--green;
+    color: var.$white--color;
+
+    .nav-container {
+      @include mix.df-jcsb-aic;
+    }
+
+    a,
+    button {
+      display: none;
+    }
+
+
+}
+
+@media (min-width: 375px) {
+  //
+  #header {
+    padding: 80px 0px;
+    ul {
+      @include mix.df-jcsb-aic;
+
+      svg {
+        padding-right: 10px;
+      }
+
+      a {
+        padding-left: 40px;
+      }
+    }
+
+    a {
+      display: block;
+    }
+
+    .nav-open {
+        display: none;
+    }
+}
+  }
+}
+
+@media (min-width: 520px) {
+  #header {
+    button {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #header {
+    ul {
+      svg {
+        padding-right: 40px;
+      }
+    }
+  }
+}
