@@ -1,0 +1,19 @@
+@use "../abstracts/variables.scss" as var;
+
+.button {
+  padding: 9px 0px 11px;
+  width: 100%;
+  max-width: 153px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  border: 2px solid var.$white--color;
+  border-radius: 25px;
+  text-align: center;
+
+  &:hover {
+    background: var.$white--color;
+    color: var.$primary--color;
+    transition-duration: 1s;
+  }
+}

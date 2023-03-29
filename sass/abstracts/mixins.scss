@@ -1,0 +1,10 @@
+@mixin df-aic {
+  display: flex;
+  align-items: center;
+}
+
+@mixin df-jcsb-aic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
