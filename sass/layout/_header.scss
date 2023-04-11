@@ -1,19 +1,59 @@
 @use "../abstracts/variables.scss" as var;
 @use "../abstracts/mixins.scss" as mix;
 
-@media (min-width: 5px) {
-  #header {
-    padding: 70px 0px;
-    background: var.$midnight--green;
-    color: var.$white--color;
+#header {
+  position: fixed;
+  top:0;
+  transition: 1.5s;
 
-    .nav-container {
-      @include mix.df-jcsb-aic;
+  padding: 70px 0px;
+  background: var.$midnight--green;
+  color: var.$white--color;
+  width: 100%;
+
+  .nav-container {
+    @include mix.df-jcsb-aic;
+  }
+
+  a {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+#navigation {
+  a {
+    display: none;
+  }
+}
+
+#nav-burger {
+  @include mix.df-fdc;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background: var.$police--blue;
+
+  .nav-box {
+    position: absolute;
+
+    #nav-close {
+      position: relative;
+      top: 60px;
+      left: 320px;
     }
 
-    a,
-    button {
-      display: none;
+    .nav-list {
+      position: fixed;
+      top: 112px;
+      margin-left: 50px;
+      li {
+        padding-bottom: 30px;
+      }
     }
   }
 }
@@ -21,18 +61,25 @@
 @media (min-width: 375px) {
   #header {
     padding: 80px 0px;
-    ul {
-      @include mix.df-jcsb-aic;
 
-      svg {
-        padding-right: 10px;
-      }
+    #navigation {
+      .navigation-list {
+        @include mix.df-jcsb-aic;
 
-      a {
-        padding-left: 40px;
+        svg {
+          padding-right: 10px;
+        }
+
+        a {
+          padding-left: 40px;
+        }
       }
     }
+  }
+}
 
+@media (min-width: 530px) {
+  #navigation {
     a {
       display: block;
     }
@@ -43,19 +90,13 @@
   }
 }
 
-@media (min-width: 520px) {
-  #header {
-    button {
-      display: block;
-    }
-  }
-}
-
 @media (min-width: 768px) {
   #header {
-    ul {
-      svg {
-        padding-right: 40px;
+    #navigation {
+      .navigation-list {
+        svg {
+          padding-right: 40px;
+        }
       }
     }
   }
